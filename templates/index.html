@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <style>
+        body {
+            background-color: rgb(171, 214, 232);
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            
+        }
+        table {
+            margin-top: 50px;
+            font-family: arial, sans-serif;
+            width: 100%;
+            border-collapse:separate;
+            border:solid black 1px;
+            border-radius:6px;
+        }
+        .navbar {
+            padding-top: 0%;
+        }
+        td,
+        th {
+            border: 1px solid #127580;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: 6998AB;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding-top: 0;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        li {
+            float: right;
+        }
+
+        li a {
+              display: block;
+              color: black;
+              text-align: center;
+              padding: 14px 16px;
+              text-decoration: none;
+        }
+
+       li a:hover {
+                   background-color: #90E0EF;
+        }
+       .active {
+           font-size: 30px;
+       }
+</style>
+</head>
+
+<body>
+<ul>
+    <li><a href="/about">About us</a></li>
+    <li><a href="/">Home</a></li>
+    <li style="float:left"><a class="active" href="/">Cov Predict</a></li>
+</ul>
+
+
+
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>Tommorows Cases</th>
+            <th>Next Weeks Cases</th>
+        </tr>
+        <tr>
+            <td>USA</td>
+            <td>{{ us_cases }}</td>
+            <td>{{ us_next_week }}</td>
+        </tr>
+        <tr>
+            <td>South Africa</td>
+            <td>{{ sa_cases }}</td>
+            <td>{{ sa_next_week }}</td>
+        </tr>
+        <tr>
+            <td>UK</td>
+            <td>{{ uk_cases }}</td>
+            <td>{{ uk_next_week }}</td>
+        </tr>
+    </table>
+    <p>Sources:
+        New York Times ||
+        JHU Corona || 
+        OurWorldInData Organization
+    </p>
+</body>        
